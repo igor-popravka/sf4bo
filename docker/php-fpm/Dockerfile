@@ -10,9 +10,10 @@ RUN apt-get install -y zlib1g-dev libpq-dev git libicu-dev libxml2-dev \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install zip xml
 
-#RUN pecl install redis-4.0.11 \
-#    && pecl install xdebug-2.6.1 \
-#    && docker-php-ext-enable redis xdebug
+RUN pecl install xdebug\
+    && docker-php-ext-enable xdebug
+
+COPY config/xdebug.ini /usr/local/etc/php/conf.d/
 
 RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
