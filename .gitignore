@@ -1,0 +1,19 @@
+###> sf4bo ###
+/.idea
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< sf4bo ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> docker ###
+/docker/data/
+/docker/logs/
+###< docker ###
+
+
